@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  text-align: initial;
+}
+
+body {
+  background: var(--primary-color);
+  font-family: "Inter", sans-serif;
+  font-family: "Outfit", sans-serif;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary-color: #edf2f8;
+  --secondary-color: #313bac;
+  --black-color: #030303;
+  --lightGray-color: #e4e4e4;
+  --gray-color: #6b7688;
+  --brown-color: #46364a;
+  --white-color: #ffffff;
+}
+
+.mr {
+  margin-right: 15px;
+}
+.ml {
+  margin-left: 15px;
+}
+.mt {
+  margin-top: 15px;
+}
+.mb {
+  margin-bottom: 15px;
+}
+
+.nav-item {
+  color: var(--black-color);
+  font-size: 18px;
+  margin-right: 25px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.nav-item:hover {
+  color: var(--secondary-color);
+}
+
+.icon {
+  color: var(--gray-color);
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.icon:hover {
+  opacity: 0.8;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ffffff;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--gray-color);
+  border-radius: 6px;
+}
+
+::-moz-scrollbar {
+  width: 8px;
+  border-radius: 6px;
+}
+
+::-moz-scrollbar-track {
+  background-color: #ffffff;
+  border-radius: 6px;
+}
+
+::-moz-scrollbar-thumb {
+  background-color: var(--gray-color);
+  border-radius: 6px;
+}
+
+.animated-image-container {
+  animation: scale 8s ease-in-out infinite;
+  background: url(./assests/IMG_20230624_142957.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border: 3px solid var(--gray-color);
+  border-radius: 29% 71% 32% 68% / 49% 47% 53% 51% ;
+  transition: all 1s ease-in-out;
+}
+
+.title {
+  font-size: 52px;
+  color: var(--black-color);
+  line-height: 70px;
+}
+
+.sub-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+}
+
+.des {
+  color: var(--gray-color);
+  font-size: 18px;
+}
+
+@keyframes scale {
+  0% {
+    border-radius: 29% 71% 32% 68%/49% 47% 53% 51%;
+  }
+  50% {
+    border-radius: 68% 32% 71% 29%/51% 53% 47% 49%;
+  }
+  100% {
+    border-radius: 29% 71% 32% 68%/49% 47% 53% 51%;
+  }
+}
+
+.es {
+  background: url(./assests/coding-bro-gr.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.ess {
+  background: url(./assests/saintstream.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+
+.s-container {
+  display: grid;
+  box-sizing: border-box;
+  grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+  gap: 15px;
+}
+
+.project-img {
+  cursor: pointer;
+}
+
+
+
+.hover-img {
+  cursor: pointer;
+  position: relative;
+}
+
+
+
+
+
+
+
