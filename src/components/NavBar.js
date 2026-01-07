@@ -1,14 +1,25 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 
 import { Box, Stack } from "@mui/material";
 
 import { HiMenuAlt3 } from "react-icons/hi";
 import { IoMdClose } from "react-icons/io";
 
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 
 const NavBar = () => {
   const [sideBarToggle, setSideBarToggle] = useState("-100%");
+
+  const navItems = [
+    { label: "Accueil", id: "#0" },
+    { label: "À Propos", id: "#1" },
+    { label: "Compétences", id: "#2" },
+    { label: "Projets", id: "#3" },
+    { label: "Formation", id: "#4" },
+    { label: "Langues", id: "#5" },
+    { label: "Certificats", id: "#6" },
+    { label: "Contact", id: "#7" },
+  ];
 
   return (
     <>
@@ -38,26 +49,19 @@ const NavBar = () => {
           onClick={() => setSideBarToggle("-100%")}
         />
         <Stack direction="column" sx={{ mt: { xs: 5, sm: 8 } }}>
-          {[
-            "Home",
-            "About",
-            "Projects",
-            "Skills",
-            "Certificates",
-            "Contact",
-          ].map((nav, index) => (
+          {navItems.map((nav) => (
             <span
-              key={nav}
+              key={nav.id}
               className="nav-item"
               style={{
                 margin: "0",
-                marginBottom: "65px",
-                fontSize: "28px",
+                marginBottom: "45px",
+                fontSize: "24px",
               }}
             >
               <Link
                 activeClass="active"
-                to={`#${index}`}
+                to={nav.id}
                 spy={true}
                 smooth={true}
                 offset={-160}
@@ -66,7 +70,7 @@ const NavBar = () => {
                   setSideBarToggle("-100%");
                 }}
               >
-                {nav}
+                {nav.label}
               </Link>
             </span>
           ))}
@@ -84,12 +88,14 @@ const NavBar = () => {
           position: "sticky",
           backdropFilter: "blur(4px)",
           backgroundColor: "rgba(255, 255, 255, 0.25)",
-          boxShadow: "0 0 14px rgba( 31, 38, 135, 0.18)",
+          boxShadow: "0 0 14px rgba(26, 54, 93, 0.12)",
           border: "1px solid rgba(255, 255, 255, 0.18)",
         }}
       >
         <Box sx={{ display: "flex", alignItems: "center", cursor: "pointer" }}>
-          <h3 style={{ fontSize: "26px", color: "#030303" }}>Ibrahim.dev</h3>
+          <h3 style={{ fontSize: "22px", color: "#1a365d", fontWeight: "700" }}>
+            Ibrahim Hamdani
+          </h3>
         </Box>
         <Box
           sx={{
@@ -99,24 +105,17 @@ const NavBar = () => {
             justifyContent: "center",
           }}
         >
-          {[
-            "Home",
-            "About",
-            "Projects",
-            "Skills",
-            "Certificates",
-            "Contact",
-          ].map((nav, index) => (
-            <span key={index} className="nav-item">
+          {navItems.map((nav) => (
+            <span key={nav.id} className="nav-item">
               <Link
                 activeClass="active"
-                to={`#${index}`}
+                to={nav.id}
                 spy={true}
                 smooth={true}
                 offset={-160}
                 duration={0}
               >
-                {nav}
+                {nav.label}
               </Link>
             </span>
           ))}

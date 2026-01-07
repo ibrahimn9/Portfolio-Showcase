@@ -13,6 +13,10 @@ import react from "../assests/react.svg";
 import redux from "../assests/redux.svg";
 import fs from "../assests/fs.png";
 import gql from "../assests/gql.png";
+import ordertech from "../assests/ordertech.png";
+import hawia from "../assests/hawia.png";
+import adminhawia from "../assests/adminhawia.png";
+import erphawia from "../assests/erphawia.png";
 
 export default {
   me,
@@ -30,4 +34,8 @@ export default {
   redux,
   fs,
   gql,
+  ordertech,
+  hawia,
+  adminhawia,
+  erphawia,
 };

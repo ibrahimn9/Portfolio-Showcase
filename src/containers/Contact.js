@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
 import { HiMail } from "react-icons/hi";
 import { BsFillTelephoneFill } from "react-icons/bs";
@@ -7,49 +7,57 @@ import { BsFillTelephoneFill } from "react-icons/bs";
 const Contact = () => {
   return (
     <Box
-      sx={{ px: { xs: 2, md: 6, lg: 12, xl: 20 }, py: 6, background: "white" }}
-      id="#5"
+      sx={{ px: { xs: 2, md: 6, lg: 12, xl: 20 }, py: 8 }}
+      id="#7"
     >
       <Typography
         variant="h3"
         sx={{
-          fontSize: "18px",
+          fontSize: "16px",
           fontFamily: '"Poppins", sans-serif',
-          fontWeight: "700",
-          color: "#313bac",
-          margin: "auto",
-          mb: 2,
+          fontWeight: "600",
+          color: "#2c5282",
+          textTransform: "uppercase",
+          letterSpacing: "2px",
+          mb: 1,
         }}
       >
-        CONTACT
+        Contact
       </Typography>
       <Typography
         variant="h3"
         sx={{
-          fontSize: "26px",
+          fontSize: { xs: "22px", md: "26px" },
           fontFamily: '"Poppins", sans-serif',
           fontWeight: "700",
-          color: "#46364a",
-          maxWidth: { xs: "90%", sm: "50%" },
-          mb: 3,
+          color: "#1a365d",
+          maxWidth: { xs: "100%", sm: "70%" },
+          mb: 4,
+          lineHeight: 1.3,
         }}
       >
-        Open for Collaboration: Feel Free to Contact Me and Let's Bring Your
-        Vision to Reality
+        Ouvert aux collaborations : N'hésitez pas à me contacter pour concrétiser vos projets
       </Typography>
       <Box
         sx={{
           display: "flex",
           flexDirection: { xs: "column", sm: "row" },
-          mt: 4,
+          gap: 4,
         }}
       >
         <Box
           sx={{
             display: "flex",
             alignItems: "center",
-            mr: { md: 8 },
-            mb: { xs: 4, sm: 0 },
+            p: 3,
+            borderRadius: 2,
+            background: "white",
+            boxShadow: "0 4px 20px rgba(26, 54, 93, 0.08)",
+            border: "1px solid #e2e8f0",
+            transition: "transform 0.2s",
+            "&:hover": {
+              transform: "translateY(-2px)",
+            },
           }}
         >
           <Box
@@ -58,27 +66,33 @@ const Contact = () => {
               minWidth: "50px",
               height: { xs: "50px", md: "60px" },
               borderRadius: "50%",
-              background: "#edf2f8",
-              boxShadow: "0 0 10px rgba( 31, 38, 135, 0.18)",
+              background: "#ebf4ff",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
               mr: 2,
             }}
           >
-            <HiMail style={{ fontSize: "32px", color: "#313bac" }} />
+            <HiMail style={{ fontSize: "28px", color: "#2c5282" }} />
           </Box>
           <Box>
             <Typography
               variant="h3"
-              sx={{ fontSize: "18px", fontWeight: "700" }}
+              sx={{ 
+                fontSize: "16px", 
+                fontWeight: "600",
+                color: "#1a365d",
+                fontFamily: '"Poppins", sans-serif',
+              }}
             >
-              Mail
+              Email
             </Typography>
             <Typography
-              variant="p"
-              className="des"
-              sx={{ fontSize: { xs: "14px", md: "16px" }, wordBreak: "break-all" }}
+              sx={{ 
+                fontSize: { xs: "14px", md: "15px" }, 
+                color: "#4a5568",
+                wordBreak: "break-all" 
+              }}
             >
               hamdaniibrahim.contact@gmail.com
             </Typography>
@@ -88,6 +102,15 @@ const Contact = () => {
           sx={{
             display: "flex",
             alignItems: "center",
+            p: 3,
+            borderRadius: 2,
+            background: "white",
+            boxShadow: "0 4px 20px rgba(26, 54, 93, 0.08)",
+            border: "1px solid #e2e8f0",
+            transition: "transform 0.2s",
+            "&:hover": {
+              transform: "translateY(-2px)",
+            },
           }}
         >
           <Box
@@ -96,8 +119,7 @@ const Contact = () => {
               minWidth: "50px",
               height: { xs: "50px", md: "60px" },
               borderRadius: "50%",
-              background: "#edf2f8",
-              boxShadow: "0 0 10px rgba( 31, 38, 135, 0.18)",
+              background: "#ebf4ff",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
@@ -105,22 +127,25 @@ const Contact = () => {
             }}
           >
             <BsFillTelephoneFill
-              style={{ fontSize: "32px", color: "#313bac" }}
+              style={{ fontSize: "24px", color: "#2c5282" }}
             />
           </Box>
           <Box>
             <Typography
               variant="h3"
-              sx={{ fontSize: "18px", fontWeight: "700" }}
+              sx={{ 
+                fontSize: "16px", 
+                fontWeight: "600",
+                color: "#1a365d",
+                fontFamily: '"Poppins", sans-serif',
+              }}
             >
-              Phone Number
+              Téléphone
             </Typography>
             <Typography
-              variant="p"
-              className="des"
-              sx={{ fontSize: { xs: "14px", md: "16px" } }}
+              sx={{ fontSize: { xs: "14px", md: "15px" }, color: "#4a5568" }}
             >
-              +213799973962
+              +213 799 973 962
             </Typography>
           </Box>
         </Box>

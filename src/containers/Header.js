@@ -4,8 +4,6 @@ import { Box, Stack, Typography } from "@mui/material";
 import animationData from "../assests/react.json";
 import Lottie from "lottie-react";
 
-import images from "../constants/images";
-
 import { BsGithub } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
 
@@ -41,48 +39,49 @@ const Header = () => {
             sx={{
               display: "flex",
               alignItems: "center",
-              fontSize: { xs: "40px", sm: "46px", md: "48px", lg: "52px" },
+              fontSize: { xs: "32px", sm: "38px", md: "42px", lg: "48px" },
               fontFamily: '"Poppins", sans-serif',
               fontWeight: "700",
               mb: { xs: 2, lg: 1 },
-              color: "#030303",
+              color: "#1a365d",
+              lineHeight: 1.2,
             }}
           >
-            Front-End React Developer{" "}
-            <Box
-              className="ml"
-              sx={{
-                minHeight: "60px",
-                minWidth: "60px",
-                maxHeight: "180px",
-                maxWidth: "180px",
-                display: { xs: "none", sm: "block" },
-              }}
-            >
-              {" "}
-              <Lottie
-                animationData={animationData}
-                loop={true}
-                sytle={{ height: "10px", width: "10px" }}
-              />
-            </Box>
+            Développeur Full Stack & Ingénieur Logiciel{" "}
+          
+          </Typography>
+          <Typography
+            variant="h2"
+            sx={{
+              fontSize: { xs: "18px", md: "20px" },
+              fontFamily: '"Poppins", sans-serif',
+              fontWeight: "500",
+              mb: 2,
+              color: "#2c5282",
+            }}
+          >
+            Étudiant Ingénieur 5ème Année | ESI Sidi Bel Abbès
           </Typography>
           <p className="des">
-            Hi, I'm a Front-End React Developer proficient in creating engaging
-            and responsive web applications using React.
+            Passionné par la conception de solutions innovantes et robustes. 
+            Expert en développement Full Stack avec une spécialisation en architectures 
+            microservices, Spring Boot, et DevOps. Je conçois des applications web scalables 
+            et performantes, de la conception à la mise en production.
           </p>
           <Box sx={{ mt: 3 }}>
             <a
-              href="https://www.linkedin.com/in/hamdani-ibrahim-427200281/"
+              href="https://www.linkedin.com/in/ibrahimn9/"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <BsLinkedin className="icon mr" />
             </a>
             <a
               href="https://github.com/ibrahimn9"
               target="_blank"
+              rel="noopener noreferrer"
             >
-            <BsGithub className="icon" />
+              <BsGithub className="icon" />
             </a>
           </Box>
         </Box>

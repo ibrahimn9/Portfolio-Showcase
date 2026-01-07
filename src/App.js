@@ -1,11 +1,13 @@
 import React from "react";
-import { Box, Stack } from "@mui/material";
+import { Box } from "@mui/material";
 
 import {
   Header,
   About,
-  Projects,
   Skills,
+  Projects,
+  Education,
+  Languages,
   Certificates,
   Contact,
   Footer,
@@ -18,8 +20,10 @@ const App = () => {
       <NavBar />
       <Header />
       <About />
-      <Projects />
       <Skills />
+      <Projects />
+      <Education />
+      <Languages />
       <Certificates />
       <Contact />
       <Footer />
