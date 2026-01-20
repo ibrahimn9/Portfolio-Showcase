@@ -44,11 +44,6 @@ const Projects = () => {
       technologies: ["NestJS", "PostgreSQL", "Prisma", "React", "TypeScript"],
       image: "ordertech",
       liveUrl: "https://ordertech.ai",
-      credentials: {
-        label: "Accès Demo",
-        email: "owner@test.com",
-        password: "Owner123!",
-      },
     },
     {
       title: "Hawiacom",
@@ -67,19 +62,6 @@ const Projects = () => {
         { label: "Client", url: "https://hawiacom.com" },
         { label: "Admin", url: "https://admin.hawiacom.com" },
         { label: "ERP", url: "https://erp.hawiacom.com" },
-      ],
-      credentials: [
-        {
-          label: "Client & ERP",
-          companyId: "7266400434",
-          email: "hamdani20.ibrahim03@gmail.com",
-          password: "ibrahim2004",
-        },
-        {
-          label: "Admin",
-          email: "ibrahim@hawia.com",
-          password: "ibrahim2003",
-        },
       ],
     },
   ];
@@ -291,61 +273,6 @@ const Projects = () => {
                     </a>
                   ))}
               </Stack>
-
-              {/* Credentials */}
-              {project.credentials && (
-                <Box
-                  sx={{
-                    p: 2,
-                    borderRadius: 2,
-                    backgroundColor: "#f7fafc",
-                    border: "1px dashed #cbd5e0",
-                  }}
-                >
-                  <Typography
-                    sx={{
-                      fontSize: "12px",
-                      fontWeight: "600",
-                      color: "#2c5282",
-                      mb: 1,
-                      display: "flex",
-                      alignItems: "center",
-                      gap: 0.5,
-                    }}
-                  >
-                    <BsKey /> Identifiants de Démonstration
-                  </Typography>
-                  {!Array.isArray(project.credentials) && (
-                    <Typography sx={{ fontSize: "12px", color: "#4a5568", fontFamily: "monospace" }}>
-                      <strong>Email:</strong> {project.credentials.email}
-                      <br />
-                      <strong>Mot de passe:</strong> {project.credentials.password}
-                    </Typography>
-                  )}
-                  {Array.isArray(project.credentials) && (
-                    <Stack spacing={1}>
-                      {project.credentials.map((cred, i) => (
-                        <Box key={i}>
-                          <Typography sx={{ fontSize: "11px", fontWeight: "600", color: "#2c5282" }}>
-                            {cred.label}:
-                          </Typography>
-                          <Typography sx={{ fontSize: "11px", color: "#4a5568", fontFamily: "monospace" }}>
-                            {cred.companyId && (
-                              <>
-                                <strong>ID Entreprise:</strong> {cred.companyId}
-                                <br />
-                              </>
-                            )}
-                            <strong>Email:</strong> {cred.email}
-                            <br />
-                            <strong>Mot de passe:</strong> {cred.password}
-                          </Typography>
-                        </Box>
-                      ))}
-                    </Stack>
-                  )}
-                </Box>
-              )}
             </Box>
           </Box>
         ))}
